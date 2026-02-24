@@ -21,6 +21,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import Image from "next/image";
 
 import LinkBehavior from "@/components/link";
 
@@ -65,7 +66,7 @@ export default function Footer() {
       {/* ── Main Footer ── */}
       <Box
         sx={{
-          background: "linear-gradient(135deg, #0A1628 0%, #0F2847 50%, #0A3035 100%)",
+          background: "linear-gradient(135deg, #0A1F0A 0%, #0F2E1A 50%, #1A0A10 100%)",
           color: "white",
           pt: { xs: 6, md: 8 },
           pb: { xs: 4, md: 5 },
@@ -78,16 +79,18 @@ export default function Footer() {
               <Stack direction="row" spacing={1.2} alignItems="center" mb={2.5}>
                 <Box
                   sx={{
-                    width: 44,
-                    height: 44,
+                    width: 52,
+                    height: 52,
                     borderRadius: 2,
-                    background: "linear-gradient(135deg, #1565C0, #00897B)",
+                    bgcolor: "rgba(255,255,255,0.9)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    p: 0.4,
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
                   }}
                 >
-                  <LocalHospitalIcon sx={{ fontSize: 24, color: "white" }} />
+                  <Image src="/logo.svg" alt="Deeprani IMS Logo" width={44} height={44} style={{ objectFit: "contain" }} />
                 </Box>
                 <Box>
                   <Typography
@@ -144,7 +147,7 @@ export default function Footer() {
                       height: 38,
                       transition: "all 0.25s ease",
                       "&:hover": {
-                        bgcolor: "rgba(21,101,192,0.4)",
+                        bgcolor: "rgba(194,24,91,0.35)",
                         color: "white",
                         transform: "translateY(-2px)",
                       },
@@ -172,7 +175,7 @@ export default function Footer() {
                     left: 0,
                     width: 30,
                     height: 2,
-                    bgcolor: "#1565C0",
+                    bgcolor: "#E91E8C",
                     borderRadius: 1,
                   },
                 }}
@@ -219,7 +222,7 @@ export default function Footer() {
                     left: 0,
                     width: 30,
                     height: 2,
-                    bgcolor: "#00897B",
+                    bgcolor: "#43A047",
                     borderRadius: 1,
                   },
                 }}
@@ -266,7 +269,7 @@ export default function Footer() {
                     left: 0,
                     width: 30,
                     height: 2,
-                    bgcolor: "#42A5F5",
+                    bgcolor: "#F48FB1",
                     borderRadius: 1,
                   },
                 }}
@@ -281,7 +284,7 @@ export default function Footer() {
               >
                 <Stack direction="row" spacing={1.5} alignItems="flex-start">
                   <LocationOnIcon
-                    sx={{ fontSize: 20, color: "#42A5F5", mt: 0.3 }}
+                    sx={{ fontSize: 20, color: "#F48FB1", mt: 0.3 }}
                   />
                   <Typography
                     variant="body2"
@@ -300,7 +303,7 @@ export default function Footer() {
                 </Stack>
 
                 <Stack direction="row" spacing={1.5} alignItems="center">
-                  <PhoneIcon sx={{ fontSize: 20, color: "#42A5F5" }} />
+                  <PhoneIcon sx={{ fontSize: 20, color: "#F48FB1" }} />
                   <Typography
                     component="a"
                     href="tel:+919876543210"
@@ -317,7 +320,7 @@ export default function Footer() {
                 </Stack>
 
                 <Stack direction="row" spacing={1.5} alignItems="center">
-                  <EmailIcon sx={{ fontSize: 20, color: "#42A5F5" }} />
+                  <EmailIcon sx={{ fontSize: 20, color: "#F48FB1" }} />
                   <Typography
                     component="a"
                     href="mailto:info@deeprani-institute.in"
@@ -334,7 +337,7 @@ export default function Footer() {
                 </Stack>
 
                 <Stack direction="row" spacing={1.5} alignItems="center">
-                  <AccessTimeIcon sx={{ fontSize: 20, color: "#42A5F5" }} />
+                  <AccessTimeIcon sx={{ fontSize: 20, color: "#F48FB1" }} />
                   <Typography
                     variant="body2"
                     sx={{

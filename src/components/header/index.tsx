@@ -22,12 +22,12 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import Image from "next/image";
 
 import LinkBehavior from "@/components/link";
 import { courses } from "@/app/courses/courseData";
@@ -103,7 +103,7 @@ export default function Header() {
         component="div"
         role="banner"
         sx={{
-          bgcolor: "#0A2540",
+          bgcolor: "#0A1F0A",
           color: "rgba(255,255,255,0.85)",
           py: 0.8,
           display: { xs: "none", md: "block" },
@@ -171,8 +171,8 @@ export default function Header() {
         aria-label="Main navigation"
         sx={{
           background:
-            "linear-gradient(135deg, #0D47A1 0%, #1565C0 60%, #00695C 100%)",
-          boxShadow: "0 2px 20px rgba(13,71,161,0.15)",
+            "linear-gradient(135deg, #1B5E20 0%, #2E7D32 45%, #C2185B 100%)",
+          boxShadow: "0 2px 20px rgba(194,24,91,0.18)",
         }}
       >
         <Container maxWidth="lg">
@@ -188,24 +188,31 @@ export default function Header() {
               component={LinkBehavior}
               href="/"
               direction="row"
-              spacing={1.2}
+              spacing={1.5}
               alignItems="center"
               aria-label="DeepRani Institute of Medical Sciences — Home"
               sx={{ textDecoration: "none", color: "white" }}
             >
               <Box
                 sx={{
-                  width: 42,
-                  height: 42,
+                  width: 52,
+                  height: 52,
                   borderRadius: 2,
-                  bgcolor: "rgba(255,255,255,0.15)",
-                  backdropFilter: "blur(8px)",
+                  bgcolor: "rgba(255,255,255,0.92)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  p: 0.5,
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
                 }}
               >
-                <LocalHospitalIcon sx={{ fontSize: 24, color: "white" }} />
+                <Image
+                  src="/logo.svg"
+                  alt="Deeprani IMS Logo"
+                  width={44}
+                  height={44}
+                  style={{ objectFit: "contain" }}
+                />
               </Box>
               <Box>
                 <Typography
@@ -225,7 +232,7 @@ export default function Header() {
                     fontWeight: 500,
                     letterSpacing: 1.2,
                     textTransform: "uppercase",
-                    opacity: 0.8,
+                    opacity: 0.85,
                   }}
                 >
                   Institute of Medical Sciences
@@ -331,7 +338,7 @@ export default function Header() {
                           transform: "translateX(-50%) scaleX(0)",
                           width: "60%",
                           height: 2,
-                          bgcolor: "#80CBC4",
+                          bgcolor: "#F48FB1",
                           borderRadius: 1,
                           transition: "transform 0.25s ease",
                         },
@@ -355,16 +362,16 @@ export default function Header() {
                   sx={{
                     ml: 1,
                     bgcolor: "white",
-                    color: "#0D47A1",
+                    color: "#C2185B",
                     fontWeight: 700,
                     fontSize: "0.85rem",
                     px: 2.5,
                     py: 0.8,
                     borderRadius: 2,
                     "&:hover": {
-                      bgcolor: "#E3F2FD",
+                      bgcolor: "#FCE4EC",
                       transform: "translateY(-1px)",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+                      boxShadow: "0 4px 15px rgba(194,24,91,0.15)",
                     },
                     transition: "all 0.25s ease",
                   }}
@@ -401,7 +408,7 @@ export default function Header() {
           sx: {
             width: 300,
             background:
-              "linear-gradient(180deg, #0D47A1 0%, #1565C0 40%, #00695C 100%)",
+              "linear-gradient(180deg, #1B5E20 0%, #2E7D32 40%, #C2185B 100%)",
             color: "white",
           },
         }}
@@ -415,7 +422,20 @@ export default function Header() {
             mb={3}
           >
             <Stack direction="row" spacing={1} alignItems="center">
-              <LocalHospitalIcon sx={{ fontSize: 22 }} />
+              <Box
+                sx={{
+                  width: 36,
+                  height: 36,
+                  bgcolor: "rgba(255,255,255,0.9)",
+                  borderRadius: 1.5,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  p: 0.3,
+                }}
+              >
+                <Image src="/logo.svg" alt="Logo" width={30} height={30} style={{ objectFit: "contain" }} />
+              </Box>
               <Typography variant="h6" fontWeight={700} fontSize="1rem">
                 DeepRani Institute
               </Typography>
@@ -494,10 +514,10 @@ export default function Header() {
             fullWidth
             sx={{
               bgcolor: "white",
-              color: "#0D47A1",
+              color: "#C2185B",
               fontWeight: 700,
               py: 1.2,
-              "&:hover": { bgcolor: "#E3F2FD" },
+              "&:hover": { bgcolor: "#FCE4EC" },
             }}
           >
             Register Interest

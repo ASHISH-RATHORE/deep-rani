@@ -7,16 +7,16 @@ export const medicalTheme = createTheme({
     mode: "light",
 
     primary: {
-      main: "#1565C0",
-      light: "#42A5F5",
-      dark: "#0D47A1",
+      main: "#ef3170",       // logo hot pink
+      light: "#f7779c",
+      dark: "#b01550",
       contrastText: "#FFFFFF",
     },
 
     secondary: {
-      main: "#00897B",
-      light: "#4DB6AC",
-      dark: "#00695C",
+      main: "#259a43",       // logo leaf green
+      light: "#55c46b",
+      dark: "#006837",
       contrastText: "#FFFFFF",
     },
 
@@ -29,11 +29,11 @@ export const medicalTheme = createTheme({
     },
 
     warning: {
-      main: "#ED6C02",
+      main: "#fbb03b",       // logo amber/orange
     },
 
     info: {
-      main: "#0288D1",
+      main: "#ef3170",
     },
 
     background: {
@@ -118,8 +118,9 @@ export const medicalTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: "#1565C0",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+          background:
+            "linear-gradient(135deg, #006837 0%, #259a43 45%, #ef3170 100%)",
+          boxShadow: "0 2px 12px rgba(239,49,112,0.18)",
           borderRadius: 0,
         },
       },
@@ -205,7 +206,7 @@ export const medicalTheme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
-          color: "#1565C0",
+          color: "#ef3170",
           textDecoration: "none",
 
           "&:hover": {

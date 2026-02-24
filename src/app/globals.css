@@ -8,9 +8,11 @@
 }
 
 :root {
-  --primary: #1565c0;
-  --primary-dark: #0d47a1;
-  --secondary: #00897b;
+  --primary: #ef3170;
+  --primary-dark: #b01550;
+  --secondary: #259a43;
+  --secondary-dark: #006837;
+  --accent: #fbb03b;
   --bg-light: #f5f7fa;
   --text-primary: #0f172a;
   --text-secondary: #475569;
