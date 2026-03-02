@@ -248,7 +248,7 @@ export default function HomePage() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(135deg, rgba(13,71,161,0.9) 0%, rgba(0,137,123,0.85) 50%, rgba(13,71,161,0.8) 100%)",
+              "linear-gradient(160deg, rgba(255,255,255,0.88) 0%, rgba(240,248,255,0.82) 50%, rgba(255,240,245,0.80) 100%)",
             zIndex: 1,
           }}
         />
@@ -276,7 +276,7 @@ export default function HomePage() {
               variant="h1"
               component="h1"
               sx={{
-                color: "white",
+                color: "#1A2340",
                 fontSize: { xs: "1.8rem", sm: "2.5rem", md: "3.2rem" },
                 fontWeight: 800,
                 lineHeight: 1.15,
@@ -289,7 +289,7 @@ export default function HomePage() {
                 component="span"
                 sx={{
                   background:
-                    "linear-gradient(90deg, #81D4FA, #80CBC4)",
+                    "linear-gradient(90deg, #1B5E20, #C2185B)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -302,7 +302,7 @@ export default function HomePage() {
               variant="h5"
               component="p"
               sx={{
-                color: "rgba(255,255,255,0.9)",
+                color: "rgba(30,30,50,0.85)",
                 fontSize: { xs: "1rem", md: "1.25rem" },
                 lineHeight: 1.6,
                 maxWidth: 600,
@@ -320,14 +320,14 @@ export default function HomePage() {
                 component={LinkBehavior}
                 href="/contact"
                 sx={{
-                  bgcolor: "white",
-                  color: "#0D47A1",
+                  background: "linear-gradient(135deg, #1B5E20, #C2185B)",
+                  color: "white",
                   fontWeight: 700,
                   fontSize: "1rem",
                   px: 4,
                   py: 1.5,
                   "&:hover": {
-                    bgcolor: "#E3F2FD",
+                    background: "linear-gradient(135deg, #2E7D32, #AD1457)",
                     transform: "translateY(-2px)",
                     boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
                   },
@@ -343,16 +343,16 @@ export default function HomePage() {
                 component={LinkBehavior}
                 href="/courses"
                 sx={{
-                  color: "white",
-                  borderColor: "rgba(255,255,255,0.5)",
+                  color: "#1B5E20",
+                  borderColor: "#1B5E20",
                   fontWeight: 600,
                   fontSize: "1rem",
                   px: 4,
                   py: 1.5,
-                  backdropFilter: "blur(4px)",
                   "&:hover": {
-                    borderColor: "white",
-                    bgcolor: "rgba(255,255,255,0.1)",
+                    borderColor: "#C2185B",
+                    color: "#C2185B",
+                    bgcolor: "rgba(194,24,91,0.05)",
                     transform: "translateY(-2px)",
                   },
                   transition: "all 0.3s ease",
@@ -415,11 +415,12 @@ export default function HomePage() {
                     variant="h3"
                     sx={{
                       fontWeight: 800,
-                      fontSize: { xs: "1.8rem", md: "2.4rem" },
+                      fontSize: { xs: "1.4rem", md: "2.4rem" },
                       background:
                         "linear-gradient(135deg, #1565C0, #00897B)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
+                      wordBreak: "break-word",
                     }}
                   >
                     {stat.value}
@@ -428,6 +429,7 @@ export default function HomePage() {
                     variant="body1"
                     color="text.secondary"
                     fontWeight={500}
+                    sx={{ fontSize: { xs: "0.78rem", md: "1rem" } }}
                   >
                     {stat.label}
                   </Typography>

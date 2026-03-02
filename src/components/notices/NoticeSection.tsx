@@ -123,54 +123,85 @@ export default async function NoticeSection() {
                                 spacing={{ xs: 0.5, sm: 1 }}
                             >
                                 {/* Left: Title + Badges */}
-                                <Stack
-                                    direction="row"
-                                    spacing={1}
-                                    alignItems="center"
-                                    sx={{ flex: 1, minWidth: 0, overflow: "hidden" }}
-                                >
-                                    <Chip
-                                        label={notice.category}
-                                        size="small"
-                                        sx={{
-                                            bgcolor: (categoryColors[notice.category] || "#607D8B") + "15",
-                                            color: categoryColors[notice.category] || "#607D8B",
-                                            fontWeight: 700,
-                                            fontSize: "0.65rem",
-                                            height: 20,
-                                            flexShrink: 0,
-                                        }}
-                                    />
-                                    {notice.important && (
+                                <Box sx={{ flex: 1, minWidth: 0 }}>
+                                    {/* Chips row */}
+                                    <Stack direction="row" spacing={0.8} alignItems="center" mb={{ xs: 0.4, sm: 0 }} sx={{ display: { xs: "flex", sm: "none" } }}>
                                         <Chip
-                                            icon={<PriorityHighIcon sx={{ fontSize: "0.75rem !important", color: "#C62828 !important" }} />}
-                                            label="Important"
+                                            label={notice.category}
                                             size="small"
-                                            sx={{ bgcolor: "#FFEBEE", color: "#C62828", fontWeight: 700, fontSize: "0.65rem", height: 20, flexShrink: 0, display: { xs: "none", sm: "flex" } }}
+                                            sx={{
+                                                bgcolor: (categoryColors[notice.category] || "#607D8B") + "15",
+                                                color: categoryColors[notice.category] || "#607D8B",
+                                                fontWeight: 700,
+                                                fontSize: "0.65rem",
+                                                height: 20,
+                                                flexShrink: 0,
+                                            }}
                                         />
-                                    )}
-                                    {notice.isNew && (
+                                    </Stack>
+                                    {/* Desktop: chips inline with title */}
+                                    <Stack
+                                        direction="row"
+                                        spacing={1}
+                                        alignItems="center"
+                                        sx={{ display: { xs: "none", sm: "flex" }, minWidth: 0, overflow: "hidden" }}
+                                    >
                                         <Chip
-                                            icon={<FiberNewIcon sx={{ fontSize: "0.8rem !important", color: "#2E7D32 !important" }} />}
-                                            label="New"
+                                            label={notice.category}
                                             size="small"
-                                            sx={{ bgcolor: "#E8F5E9", color: "#2E7D32", fontWeight: 700, fontSize: "0.65rem", height: 20, flexShrink: 0, display: { xs: "none", sm: "flex" } }}
+                                            sx={{
+                                                bgcolor: (categoryColors[notice.category] || "#607D8B") + "15",
+                                                color: categoryColors[notice.category] || "#607D8B",
+                                                fontWeight: 700,
+                                                fontSize: "0.65rem",
+                                                height: 20,
+                                                flexShrink: 0,
+                                            }}
                                         />
-                                    )}
+                                        {notice.important && (
+                                            <Chip
+                                                icon={<PriorityHighIcon sx={{ fontSize: "0.75rem !important", color: "#C62828 !important" }} />}
+                                                label="Important"
+                                                size="small"
+                                                sx={{ bgcolor: "#FFEBEE", color: "#C62828", fontWeight: 700, fontSize: "0.65rem", height: 20, flexShrink: 0 }}
+                                            />
+                                        )}
+                                        {notice.isNew && (
+                                            <Chip
+                                                icon={<FiberNewIcon sx={{ fontSize: "0.8rem !important", color: "#2E7D32 !important" }} />}
+                                                label="New"
+                                                size="small"
+                                                sx={{ bgcolor: "#E8F5E9", color: "#2E7D32", fontWeight: 700, fontSize: "0.65rem", height: 20, flexShrink: 0 }}
+                                            />
+                                        )}
+                                        <Typography
+                                            variant="body2"
+                                            fontWeight={600}
+                                            color="#0F172A"
+                                            sx={{
+                                                fontSize: "0.9rem",
+                                                overflow: "hidden",
+                                                textOverflow: "ellipsis",
+                                                whiteSpace: "nowrap",
+                                            }}
+                                        >
+                                            {notice.title}
+                                        </Typography>
+                                    </Stack>
+                                    {/* Mobile: title below chip, allowed to wrap */}
                                     <Typography
                                         variant="body2"
                                         fontWeight={600}
                                         color="#0F172A"
                                         sx={{
-                                            fontSize: { xs: "0.82rem", md: "0.9rem" },
-                                            overflow: "hidden",
-                                            textOverflow: "ellipsis",
-                                            whiteSpace: "nowrap",
+                                            fontSize: "0.82rem",
+                                            display: { xs: "block", sm: "none" },
+                                            wordBreak: "break-word",
                                         }}
                                     >
                                         {notice.title}
                                     </Typography>
-                                </Stack>
+                                </Box>
 
                                 {/* Right: Date + Download */}
                                 <Stack direction="row" spacing={1.5} alignItems="center" flexShrink={0}>
